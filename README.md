@@ -1,6 +1,6 @@
 # Contact Management Application
 
-Live at: 
+Live at: https://gireejesh-nilesh.github.io/contact-card-list-with-reactjs/
 
 ## Overview
 
@@ -9,70 +9,72 @@ This project is a responsive Contact Management application built using React. I
 The project is designed to behave like a production-ready frontend application rather than a simple demo.
 
 ## Features
+
 1. Contact Creation
 
- - Add new contacts using a controlled form
+- Add new contacts using a controlled form
 
- - Fields include name, profile image URL, mobile number, and email
+- Fields include name, profile image URL, mobile number, and email
 
- - All inputs are managed using React state
+- All inputs are managed using React state
+
 2. Input Validation
 
- - Email validation with allowed domain extensions (.com, .in, .org, .net, .edu, .gov, .co, .io)
+- Email validation with allowed domain extensions (.com, .in, .org, .net, .edu, .gov, .co, .io)
 
- - Mobile number restricted to valid 10-digit numeric values
+- Mobile number restricted to valid 10-digit numeric values
 
- - Image URL validated for proper URL structure
+- Image URL validated for proper URL structure
 
- - Form submission blocked until all inputs are valid
+- Form submission blocked until all inputs are valid
 
 3. Duplicate Prevention
 
- - Prevents adding contacts with duplicate mobile numbers
+- Prevents adding contacts with duplicate mobile numbers
 
- - Ensures uniqueness and data consistency
+- Ensures uniqueness and data consistency
 
 4. Dynamic Submit Button Behavior
 
- - Submit button remains disabled until the form is complete and valid
+- Submit button remains disabled until the form is complete and valid
 
- - Button opacity reflects form readiness
+- Button opacity reflects form readiness
 
- - Button text updates dynamically based on form validity
+- Button text updates dynamically based on form validity
 
 5. Persistent Storage
 
- - Contacts are stored in browser localStorage
+- Contacts are stored in browser localStorage
 
- - Data persists across page reloads, new tabs, and browser restarts
+- Data persists across page reloads, new tabs, and browser restarts
 
- - State is safely initialized to prevent overwriting stored data
+- State is safely initialized to prevent overwriting stored data
 
 6. Responsive Design
 
- - Layout adapts for mobile and desktop devices
+- Layout adapts for mobile and desktop devices
 
- - Inline responsive styles ensure consistent behavior even when Tailwind spacing utilities are unavailable
+- Inline responsive styles ensure consistent behavior even when Tailwind spacing utilities are unavailable
 
- - Cards and form fields adjust smoothly across screen sizes
+- Cards and form fields adjust smoothly across screen sizes
 
 7. Consistent Card Layout
 
- - Fixed card width prevents layout shifts due to varying content lengths
+- Fixed card width prevents layout shifts due to varying content lengths
 
- - Clean and uniform card presentation
+- Clean and uniform card presentation
 
 8. Contact Deletion
 
- - Contacts can be removed using stable unique identifiers
+- Contacts can be removed using stable unique identifiers
 
- - Avoids index-based deletion issues common in React applications
+- Avoids index-based deletion issues common in React applications
 
 9. Error Handling
 
- - Clear error messages displayed without disturbing layout
+- Clear error messages displayed without disturbing layout
 
- - Improves user experience and form usability
+- Improves user experience and form usability
 
 ## Tech Stack
 
@@ -85,9 +87,10 @@ The project is designed to behave like a production-ready frontend application r
 - localStorage (client-side persistence)
 
 ## Project Structure
+
 src/
 ├── components/
-│   └── Card.jsx
+│ └── Card.jsx
 ├── App.jsx
 ├── main.jsx
 └── index.css
@@ -95,16 +98,16 @@ src/
 ## Installation and Setup
 
 Clone the repository
- -> git clone <repository-url>
+-> git clone <repository-url>
 
 Navigate to the project directory
- -> cd contact-management-app
+-> cd contact-management-app
 
 Install dependencies
- -> npm install
+-> npm install
 
 Start the development server
- -> npm run dev
+-> npm run dev
 
 Open the application in your browser using the provided local URL
 
