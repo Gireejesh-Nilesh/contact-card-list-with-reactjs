@@ -1,16 +1,153 @@
-# React + Vite
+# Contact Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live at: 
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a responsive Contact Management application built using React. It focuses on real-world frontend engineering practices such as input validation, user experience consistency, data persistence, and safe state handling. The application allows users to add, view, and delete contacts while ensuring data integrity and persistence across browser sessions.
 
-## React Compiler
+The project is designed to behave like a production-ready frontend application rather than a simple demo.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
+1. Contact Creation
 
-## Expanding the ESLint configuration
+ - Add new contacts using a controlled form
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ - Fields include name, profile image URL, mobile number, and email
+
+ - All inputs are managed using React state
+2. Input Validation
+
+ - Email validation with allowed domain extensions (.com, .in, .org, .net, .edu, .gov, .co, .io)
+
+ - Mobile number restricted to valid 10-digit numeric values
+
+ - Image URL validated for proper URL structure
+
+ - Form submission blocked until all inputs are valid
+
+3. Duplicate Prevention
+
+ - Prevents adding contacts with duplicate mobile numbers
+
+ - Ensures uniqueness and data consistency
+
+4. Dynamic Submit Button Behavior
+
+ - Submit button remains disabled until the form is complete and valid
+
+ - Button opacity reflects form readiness
+
+ - Button text updates dynamically based on form validity
+
+5. Persistent Storage
+
+ - Contacts are stored in browser localStorage
+
+ - Data persists across page reloads, new tabs, and browser restarts
+
+ - State is safely initialized to prevent overwriting stored data
+
+6. Responsive Design
+
+ - Layout adapts for mobile and desktop devices
+
+ - Inline responsive styles ensure consistent behavior even when Tailwind spacing utilities are unavailable
+
+ - Cards and form fields adjust smoothly across screen sizes
+
+7. Consistent Card Layout
+
+ - Fixed card width prevents layout shifts due to varying content lengths
+
+ - Clean and uniform card presentation
+
+8. Contact Deletion
+
+ - Contacts can be removed using stable unique identifiers
+
+ - Avoids index-based deletion issues common in React applications
+
+9. Error Handling
+
+ - Clear error messages displayed without disturbing layout
+
+ - Improves user experience and form usability
+
+## Tech Stack
+
+- React (Functional Components and Hooks)
+
+- JavaScript (ES6+)
+
+- Tailwind CSS (styling and utility classes)
+
+- localStorage (client-side persistence)
+
+## Project Structure
+src/
+├── components/
+│   └── Card.jsx
+├── App.jsx
+├── main.jsx
+└── index.css
+
+## Installation and Setup
+
+Clone the repository
+ -> git clone <repository-url>
+
+Navigate to the project directory
+ -> cd contact-management-app
+
+Install dependencies
+ -> npm install
+
+Start the development server
+ -> npm run dev
+
+Open the application in your browser using the provided local URL
+
+## Usage
+
+~ Fill in all form fields with valid data
+
+~ The submit button becomes active once the form is valid
+
+~ Added contacts appear as cards below the form
+
+~ Contacts persist across page reloads and browser sessions
+
+~ Remove contacts using the delete button on each card
+
+## Best Practices Implemented
+
+- Controlled components for all form inputs
+
+- Immutable state updates
+
+- Derived state for form validation
+
+- Lazy state initialization from localStorage
+
+- Defensive parsing of persisted data
+
+- Clean separation of UI and logic
+
+- Responsive layout without layout shift
+
+## Future Enhancements
+
+Edit contact functionality
+
+Cross-tab synchronization
+
+Export and import contacts
+
+Backend integration with authentication
+
+TypeScript migration
+
+## License
+
+This project is open-source and available for learning and demonstration purposes.
